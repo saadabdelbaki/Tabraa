@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Tabaraa.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .covere{
+         background-image:url("img/cover.gif");
+         background-size:cove;
+        }
+    </style>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Tabaraa</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/img/logo.png" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+
+<body class="pt-0 pb-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger  sticky-top">
+   <a href="index.aspx" class="navbar-brand text-white">TABARAA</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+     
+    </ul>
+    <form class="form-inline">
+            <input class="form-control mr-sm-2" type="text" placeholder="User" aria-label="Search">
+            <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Search">
+            <button class="btn btn-outline-success bg-success text-white my-2 my-sm-0" type="submit">LOGIN</button>
+        </form>
+  </div>
+</nav>
+    <div class="containe body-content covere"  >
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </div>
+    <footer class=" d-flex justify-content-center align-items-center flex-wrap w-100 bg-danger p-2" style='width:100%; height:100px;'>
+        <a href="" class="text-white ml-3"> <%: DateTime.Now.Year %>-Tabaraa</a>
+        <a href="QueSomeNous.aspx" class="text-white ml-3">Que somme nous</a>
+        <a href="http://www.facebook.com/elhajjiabdeljabar" class="text-white ml-3">Facebook</a>
+        <a href="index.aspx" class="text-white ml-3">Acceuil</a>
+    </footer>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</body>
+   
+</html>
